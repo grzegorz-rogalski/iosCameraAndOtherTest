@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOI-Fk-rua">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Lwe-uz-O6K">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="ym9-aJ-YKb">
+                                            <connections>
+                                                <action selector="forword:" destination="vXZ-lx-hvc" id="UyI-3V-B1G"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="next" id="hjB-wQ-ej2">
+                                            <connections>
+                                                <segue destination="eiv-WF-PN5" kind="show" id="O0J-GZ-3EA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGf-75-ZoD">
+                                <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="rCj-ub-tRD"/>
+                                    <tabBarItem systemItem="more" id="9gs-Tq-Ofx"/>
+                                </items>
+                            </tabBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCp-8f-xRH">
+                                <rect key="frame" x="0.0" y="46" width="320" height="387"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU7-Si-Wer">
+                                <rect key="frame" x="137" y="441" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didBackButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iqv-eA-wHf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="myWebView" destination="hCp-8f-xRH" id="343-2T-z0J"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="31" y="-17"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="GhA-ig-m9j">
+            <objects>
+                <viewController id="eiv-WF-PN5" customClass="secondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BKD-uO-ZHJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6GA-QT-CrY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="43X-3u-kfp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYr-2z-lbg">
+                                <rect key="frame" x="0.0" y="5" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Second" id="9VM-gk-XGo">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="2xY-3K-bum">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="show" id="2wl-gr-4wa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Camera" id="zhv-fM-7hn">
+                                            <connections>
+                                                <segue destination="5wG-mj-cAp" kind="show" id="0D3-Ms-wlH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6dR-Lw-Sfh">
+                                <rect key="frame" x="67" y="70" width="187" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanger:" destination="eiv-WF-PN5" eventType="valueChanged" id="be9-Az-OZF"/>
+                                </connections>
+                            </slider>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1oq-RC-pQI">
+                                <rect key="frame" x="0.0" y="318" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="450546870.55652601">
+                                    <!--2015-04-12 15:54:30 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="pl"/>
+                                <connections>
+                                    <action selector="datePickerChanger:" destination="eiv-WF-PN5" eventType="valueChanged" id="ZgE-zq-dNe"/>
+                                </connections>
+                            </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-ub-CAk">
+                                <rect key="frame" x="255" y="107" width="51" height="31"/>
+                                <connections>
+                                    <action selector="SwitchPropertis:" destination="eiv-WF-PN5" eventType="valueChanged" id="ZgU-4w-OEh"/>
+                                </connections>
+                            </switch>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pr7-Rv-043">
+                                <rect key="frame" x="36" y="126" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChanger:" destination="eiv-WF-PN5" eventType="valueChanged" id="55O-ON-P2O"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-9F-Prt">
+                                <rect key="frame" x="16" y="203" width="288" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="date" destination="1oq-RC-pQI" id="umM-Lt-e9f"/>
+                        <outlet property="slide" destination="6dR-Lw-Sfh" id="hpU-ir-O5c"/>
+                        <outlet property="step" destination="pr7-Rv-043" id="94Z-CW-swi"/>
+                        <outlet property="textu" destination="3gc-9F-Prt" id="kq7-xs-sSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUw-Zl-JIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="-17"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="hNR-qv-nJm">
+            <objects>
+                <viewController id="5wG-mj-cAp" customClass="thirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HN3-q4-cz5"/>
+                        <viewControllerLayoutGuide type="bottom" id="qnd-cd-N1n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DcM-60-VP2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.44999999999999962" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-H8-QQc">
+                                <rect key="frame" x="0.0" y="396" width="320" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-tb-z2g">
+                                        <rect key="frame" x="8" y="8" width="68" height="68"/>
+                                        <state key="normal" title="Take">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="5wG-mj-cAp" eventType="touchUpInside" id="z0J-Y0-h3d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-ec-kwm">
+                                        <rect key="frame" x="252" y="8" width="68" height="68"/>
+                                        <state key="normal" title="Show">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectPhoto:" destination="5wG-mj-cAp" eventType="touchUpInside" id="qjk-7k-LyV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0L-Hs-LSt">
+                                        <rect key="frame" x="137" y="54" width="46" height="30"/>
+                                        <state key="normal" title="back">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="eiv-WF-PN5" kind="show" id="8ip-PC-6sl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-0A-5f5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="photoView" destination="XlN-0A-5f5" id="xpk-Q0-O5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8Y-y3-Gnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="-17"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8ip-PC-6sl"/>
+    </inferredMetricsTieBreakers>
+</document>
